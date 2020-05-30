@@ -1,0 +1,32 @@
+.show-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  height: 40vh;
+  text-align: center;
+}
+
+.show-container-inside {
+  background-color: gray;
+  opacity: 0.5;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+
+}
+
+
+.img-inside {
+  border: 1px solid green;
+  height: 75%;
+  width: 75%;
+}
+
+.li-show {
+  text-align: none;
+}
+

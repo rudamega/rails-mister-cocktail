@@ -1,15 +1,20 @@
+<div class="show-container">
+  <div class="show-container-inside">
+    <h1><%= @cocktail.name %></h1>
+  <% if @cocktail.photo.attached? %>
+  <%= cl_image_tag @cocktail.photo.key, class:"img-inside" %>
+  <% end %>
+  </div>
+  <div class="show-container-inside"> <h2> Ingredientes</h2>
 
-<h1><%= @cocktail.name %></h1>
-<% if @cocktail.photo.attached? %>
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
-   <h2> Ingredientes</h2>
-<% @cocktail.doses.each do |dose| %>
-<ul>
-  <li><%= dose.ingredient.name%> --- <%= dose.description%></li>
-</ul>
+    <% @cocktail.doses.each do |dose| %>
+    <ul>
+      <li class="show-li"><%= dose.ingredient.name%> --- <%= dose.description%></li>
+    </ul>
+    <% end %>
+  </div>
+</div>
 
-<% end %>
 
 
    <%= render 'doses/new', cocktail: @cocktail, doses: @dose %>
