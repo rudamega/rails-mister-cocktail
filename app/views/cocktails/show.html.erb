@@ -2,7 +2,7 @@
   <div class="show-container-inside">
     <h1><%= @cocktail.name %></h1>
   <% if @cocktail.photo.attached? %>
-  <%= cl_image_tag @cocktail.photo.key, class:"img-inside" %>
+  <%= cl_image_tag @cocktail.photo.key, class:"img-inside", width: 250, height:50 %>
   <% end %>
   </div>
   <div class="show-container-inside"> <h2> Ingredientes</h2>
