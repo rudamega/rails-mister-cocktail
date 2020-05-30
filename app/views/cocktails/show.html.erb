@@ -1,0 +1,15 @@
+
+<h1><%= @cocktail.name %></h1>
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+   <h2> Ingredientes</h2>
+<% @cocktail.doses.each do |dose| %>
+<ul>
+  <li><%= dose.ingredient.name%> --- <%= dose.description%></li>
+</ul>
+
+<% end %>
+
+
+   <%= render 'doses/new', cocktail: @cocktail, doses: @dose %>
+
+<%= link_to 'Back', cocktails_path, class: "btn btn-outline-secondary" %>
